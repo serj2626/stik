@@ -15,7 +15,7 @@ export default {
   <div class="accordion__item">
     <div class="accordion__title">{{ accordion.title }}</div>
     <div class="accordion__action">
-      <img :src="accordion.btnSrc" alt="" />
+      <img :src="accordion.btnSrc" alt="Plus" />
     </div>
   </div>
 </template>
@@ -40,5 +40,17 @@ export default {
 
 .accordion__action {
   padding-right: 7px;
+}
+
+@media screen and (max-width: 500px) {
+  .accordion__item {
+    max-width: 343px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .accordion__item {
+    max-width: 300px;
+  }
 }
 </style>

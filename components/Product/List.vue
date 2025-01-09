@@ -37,4 +37,10 @@ export default {
   grid-template-columns: repeat(4, 1fr);
   gap: 9px;
 }
+
+@media screen and (max-width: 900px) {
+  .galery__cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 </style>

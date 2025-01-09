@@ -68,4 +68,10 @@ export default {
     scale: 1.2;
   }
 }
+
+@media screen and (max-width: 1000px) {
+  .header {
+    justify-content: center;
+  }
+}
 </style>

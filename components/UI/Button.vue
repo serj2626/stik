@@ -5,15 +5,19 @@ export default {
       type: String,
       required: true,
     },
-  }
+  },
 };
 </script>
 <template>
   <button v-if="view === 'cart'" class="btn__tocart">
     <div class="btn__title">Добавить в корзину</div>
   </button>
-  <button v-else class="btn__favorite">
+  <button v-else-if="view === 'favorite'" class="btn__favorite">
     <img src="~assets/images/Stroke.svg" alt="favorite" />
+  </button>
+
+  <button v-else class="btn__media">
+    <img src="~assets/images/Stroke.svg" alt="favorite-media" />
   </button>
 </template>
 
@@ -44,5 +48,24 @@ export default {
   height: 44px;
 
   border: 1px solid black;
+}
+
+.btn__media {
+  display: none;
+  padding: 10px;
+  border: none;
+  background-color: #ffffff;
+  position: absolute;
+  top: 13px;
+  right: 0;
+}
+
+@media screen and (max-width: 500px) {
+  .btn__media {
+    display: block;
+    position: absolute;
+    top: 13px;
+    right: 0;
+  }
 }
 </style>

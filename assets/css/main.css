@@ -105,6 +105,12 @@ body {
 }
 
 .container {
-  max-width: 1360px;
+  padding: 0 15px;
+  max-width: calc(1360px - 30px);
   margin: 0 auto;
+}
+
+
+@media screen and (max-width: 900px) {
+
 }

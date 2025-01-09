@@ -3,23 +3,22 @@ export default {
   props: {
     product: {
       type: Object,
-      required: true
-    }
+      required: true,
+    },
   },
 };
 </script>
 <template>
-      <article class="card">
-        <img class="card__img" :src="product.src" :alt="product.title" />
-        <div class="card__body">
-          <p class="card__title">{{ product.title }}</p>
-          <div class="card__price">{{ product.price }}</div>
-        </div>
-      </article>
+  <article class="card">
+    <img class="card__img" :src="product.src" :alt="product.title" />
+    <div class="card__body">
+      <p class="card__title">{{ product.title }}</p>
+      <div class="card__price">{{ product.price }}</div>
+    </div>
+  </article>
 </template>
 
 <style scoped>
-
 .card {
   margin-bottom: 100px;
   cursor: pointer;
@@ -39,5 +38,16 @@ export default {
 .card__title {
   margin-top: 15px;
   margin-bottom: 10px;
+}
+
+.card__img {
+  width: 100%;
+}
+
+@media screen and (max-width: 900px) {
+  .card {
+    margin-bottom: 32px;
+    gap: 8px;
+  }
 }
 </style>

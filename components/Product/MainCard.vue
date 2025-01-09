@@ -17,6 +17,8 @@ export default {
       <img :src="data.src" :alt="data.title" />
     </article>
     <div class="product__description">
+      <UIButton view="accordion" />
+
       <p class="product__title">{{ data.title }}</p>
       <span class="product__price">{{ data.price }}</span>
 
@@ -66,16 +68,18 @@ export default {
 
 .product {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
 }
 .product__galery {
   margin-right: 30px;
 }
 .product__description {
+  position: relative;
+  display: flex;
+  flex-direction: column;
   padding-left: 61px;
   width: 518px;
-  height: 693px;
+  max-height: 693px;
 }
 
 .product__title {
@@ -126,12 +130,12 @@ export default {
   color: #828282;
 }
 
-.color{
+.color {
   border-bottom: 1px solid transparent;
   padding: 3px;
   transition: border-color 0.2s ease-in-out;
 
-  &:hover{
+  &:hover {
     border-color: #828282;
   }
 }
@@ -173,5 +177,56 @@ export default {
   align-items: center;
   gap: 10px;
   margin-bottom: 40px;
+}
+
+.btn__media {
+  display: none;
+  padding: 10px;
+  border: none;
+  background-color: #ffffff;
+}
+
+@media screen and (max-width: 1000px) {
+  .product {
+    flex-wrap: wrap;
+  }
+
+  .product__title {
+    margin-top: 31px;
+  }
+}
+
+@media screen and (max-width: 618px) {
+  .product__galery {
+    display: none;
+  }
+
+  .product__card {
+    background-color: green;
+  }
+
+  .product__description {
+    width: 100%;
+    padding-left: 20px;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .product__description {
+    width: 100%;
+    padding-left: 0;
+  }
+
+  .buttons {
+    display: none;
+  }
+
+  .btn__media {
+    display: block;
+    position: absolute;
+    top: 13px;
+    right: 0;
+  }
 }
 </style>
