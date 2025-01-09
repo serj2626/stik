@@ -11,22 +11,16 @@ export default {
 
     };
   },
-  methods: {
-
-  },
-  components: {
-
-  }
 };
 </script>
 <template>
-      <div class="card">
+      <article class="card">
         <img class="card__img" :src="product.src" :alt="product.title" />
         <div class="card__body">
           <p class="card__title">{{ product.title }}</p>
           <div class="card__price">{{ product.price }}</div>
         </div>
-      </div>
+      </article>
 </template>
 
 <style scoped>
