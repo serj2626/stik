@@ -12,7 +12,11 @@ export default {
   <div class="container galery">
     <p class="galery__title">Похожие товары</p>
     <div class="galery__cards">
-      <ProductItem v-for="product in products" :product="product" />
+      <ProductItem
+        v-for="(product, index) in products"
+        :key="index"
+        :product="product"
+      />
     </div>
   </div>
 </template>

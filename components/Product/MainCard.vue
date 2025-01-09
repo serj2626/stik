@@ -46,7 +46,8 @@ export default {
 
       <div class="accordion">
         <ProductAccordion
-          v-for="accordion in data.accordion"
+          v-for="(accordion, index) in data.accordion"
+          :key="index"
           :accordion="accordion"
         />
       </div>
