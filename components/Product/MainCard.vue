@@ -179,13 +179,6 @@ export default {
   margin-bottom: 40px;
 }
 
-.btn__media {
-  display: none;
-  padding: 10px;
-  border: none;
-  background-color: #ffffff;
-}
-
 @media screen and (max-width: 1000px) {
   .product {
     flex-wrap: wrap;
@@ -220,13 +213,6 @@ export default {
 
   .buttons {
     display: none;
-  }
-
-  .btn__media {
-    display: block;
-    position: absolute;
-    top: 13px;
-    right: 0;
   }
 }
 </style>

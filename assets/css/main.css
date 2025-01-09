@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "Helvetica";
+  src: url("fonts/Helvetica-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 /**
   Нормализация блочной модели
  */
@@ -75,6 +83,10 @@ html {
 }
 
 body {
+  font-family: "Helvetica", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  
   /**
       Пригодится в большинстве ситуаций
       (когда, например, нужно будет "прижать" футер к низу сайта)
