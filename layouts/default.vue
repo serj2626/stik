@@ -1,9 +1,3 @@
-<script>
-export default {
-  data() {
-  },
-};
-</script>
 <template>
   <div>
    <Header />
@@ -12,7 +6,3 @@ export default {
     </main>
   </div>
 </template>
-
-<style>
-
-</style>
