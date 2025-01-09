@@ -11,10 +11,10 @@ export default {
 <template>
   <div class="product">
     <div class="product__galery">
-      <img :src="data.galerySrc" alt="" />
+      <img :src="data.galerySrc" alt="Galery" />
     </div>
     <article class="product__card">
-      <img :src="data.src" alt="" />
+      <img :src="data.src" :alt="data.title" />
     </article>
     <div class="product__description">
       <p class="product__title">{{ data.title }}</p>
@@ -40,28 +40,15 @@ export default {
       </div>
 
       <div class="buttons">
-        <button class="btn__tocart">
-          <div class="btn__title">Добавить в корзину</div>
-        </button>
-        <button class="btn__favorite">
-          <img src="assets/images/Stroke.svg" alt="" />
-        </button>
+        <UIButton view="cart" />
+        <UIButton view="favorite" />
       </div>
 
       <div class="accordion">
-        <ProductAccordion v-for="accordion in data.accordion" :accordion="accordion" />
-        <!-- <div class="accordion__item">
-          <div class="accordion__title">Описание</div>
-          <div class="accordion__action">
-            <img src="assets/images/plus.svg" alt="" />
-          </div>
-        </div>
-        <div class="accordion__item">
-          <div class="accordion__title">Состав и Уход</div>
-          <div class="accordion__action">
-            <img src="assets/images/plus.svg" alt="" />
-          </div>
-        </div> -->
+        <ProductAccordion
+          v-for="accordion in data.accordion"
+          :accordion="accordion"
+        />
       </div>
     </div>
   </div>
@@ -121,6 +108,7 @@ export default {
   font-size: 10px;
   line-height: 14px;
   border: 1px solid black;
+  cursor: pointer;
 }
 
 .size__count {
@@ -148,6 +136,7 @@ export default {
   width: 28px;
   height: 27px;
   border: 1px solid #bdbdbd;
+  cursor: pointer;
 }
 
 .white {
@@ -167,54 +156,5 @@ export default {
   align-items: center;
   gap: 10px;
   margin-bottom: 40px;
-}
-
-.btn__title {
-  font-size: 11px;
-  line-height: 15px;
-  width: 257px;
-  height: 14px;
-  color: white;
-  text-transform: uppercase;
-  text-align: center;
-}
-
-.btn__tocart {
-  padding: 15px 25px;
-  background-color: #000000;
-  border: 1px solid currentColor;
-}
-
-.btn__favorite {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #fff;
-
-  width: 44px;
-  height: 44px;
-
-  border: 1px solid black;
-}
-
-.accordion__item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 360px;
-  padding-block: 15px;
-
-  border-block: 1px solid #e0e0e0;
-}
-
-.accordion__title {
-  text-transform: uppercase;
-  font-size: 10px;
-  line-height: 14px;
-  color: #333333;
-}
-
-.accordion__action {
-  padding-right: 7px;
 }
 </style>
