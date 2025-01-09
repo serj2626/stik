@@ -33,9 +33,15 @@ export default {
       <div class="colors">
         <p class="colors__title">Цвет: белый</p>
         <div class="colors__list">
-          <div class="colors__item white"></div>
-          <div class="colors__item black"></div>
-          <div class="colors__item beige"></div>
+          <div class="color">
+            <div class="colors__item white"></div>
+          </div>
+          <div class="color">
+            <div class="colors__item black"></div>
+          </div>
+          <div class="color">
+            <div class="colors__item beige"></div>
+          </div>
         </div>
       </div>
 
@@ -118,6 +124,16 @@ export default {
   font-size: 10px;
   line-height: 14px;
   color: #828282;
+}
+
+.color{
+  border-bottom: 1px solid transparent;
+  padding: 3px;
+  transition: border-color 0.2s ease-in-out;
+
+  &:hover{
+    border-color: #828282;
+  }
 }
 
 .colors__title {
