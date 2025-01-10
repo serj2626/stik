@@ -13,7 +13,7 @@ export default {
 <template>
   <header class="container header">
     <div class="header__logo">
-      <img src="/STIK_LOGO.png" alt="" />
+      <img src="../static/STIK_LOGO.png" alt="STIK_LOGO" />
     </div>
 
     <nav class="header__menu">
