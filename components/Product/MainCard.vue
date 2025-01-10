@@ -124,7 +124,6 @@ export default {
 .size__title {
   font-size: 10px;
   line-height: 14px;
-  margin-top: 28px;
   margin-bottom: 8px;
   color: var(--color-gray-text);
 }
@@ -247,6 +246,10 @@ export default {
 
   .product__price {
     margin-bottom: 31px;
+  }
+
+  .size__list {
+    margin-bottom: 34px;
   }
 }
 </style>
