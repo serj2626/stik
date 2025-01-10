@@ -1,6 +1,28 @@
 # stik-test
+
 # Выполнение тестового задания
 
+## [Макет](<https://www.figma.com/design/exXmsJ6aoYFCa558iTR3rU/Тестовое-задание--(коммерция)?node-id=0-1&p=f&t=KgxRw4UXAUkolC4M-0>)
+
+<hr>
+
+## Задачи
+
+- Создать nuxt2 проект
+- Сверстать макет
+- Сделать разметку адаптивной
+- Разбить на компоненты
+
+<hr>
+
+## Инструменты
+
+- nuxt2
+- vue2
+- swiper
+- css
+
+<hr>
 ## Build Setup
 
 ```bash
@@ -41,7 +63,6 @@ More information about the usage of this directory in [the documentation](https:
 Layouts are a great help when you want to change the look and feel of your Nuxt app, whether you want to include a sidebar or have distinct layouts for mobile and desktop.
 
 More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/layouts).
-
 
 ### `pages`
 
