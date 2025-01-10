@@ -230,7 +230,7 @@ export default {
 
   .product__description {
     width: 100%;
-    margin-left: 16px;
+    margin-inline: 16px;
     align-items: start;
   }
 }
