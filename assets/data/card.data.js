@@ -15,7 +15,7 @@ export const mainCard = {
     {
       title: "M",
       count: "подписка",
-      class: "no-active",
+      class: "noActive",
     },
   ],
   accordion: [
