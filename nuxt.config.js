@@ -1,6 +1,6 @@
 export default {
   mode: "static",
-  router: { base: "/stik-test/" },
+  router: { base: "/stik/" },
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
 
