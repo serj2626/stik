@@ -6,6 +6,7 @@ export const headerDataLinks = [
   {
     title: "Stroke",
     src: require("~/assets/images/Stroke.png"),
+    class: "noVisible",
   },
   {
     title: "User",
@@ -14,5 +15,6 @@ export const headerDataLinks = [
   {
     title: "Basket",
     src: require("~/assets/images/Basket.png"),
+    class: "last",
   },
 ];
