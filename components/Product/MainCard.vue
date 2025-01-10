@@ -226,7 +226,8 @@ export default {
   .product__description {
     width: 100%;
     padding-left: 20px;
-    align-items: center;
+    align-items: start;
+    margin-inline: 16px;
   }
 }
 
@@ -238,6 +239,10 @@ export default {
 
   .buttons {
     display: none;
+  }
+
+  .product__price {
+    margin-bottom: 31px;
   }
 }
 </style>

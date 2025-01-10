@@ -25,7 +25,7 @@ export default {
   transition: box-shadow 0.2s ease-in-out;
 
   &:hover {
-    box-shadow: 10px 10px 5px 0 var(--color-gray-text);
+    box-shadow: 5px 5px 15px 0 var(--color-gray-text);
   }
 }
 .card__body {

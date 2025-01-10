@@ -50,7 +50,7 @@ export default {
 
 @media screen and (max-width: 350px) {
   .accordion__item {
-    max-width: 300px;
+    max-width: 340px;
   }
 }
 </style>
