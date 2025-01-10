@@ -86,7 +86,7 @@ body {
   font-family: "Helvetica", sans-serif;
   font-size: 16px;
   font-weight: 400;
-  
+
   /**
       Пригодится в большинстве ситуаций
       (когда, например, нужно будет "прижать" футер к низу сайта)
@@ -112,17 +112,22 @@ body {
 }
 
 :root {
-  --color-white: #fff;
+  --color-text: #333;
   --color-black: #000;
+  --color-white: #fff;
+  --color-beige: #f9f1dc;
+  --color-gray: #bdbdbd;
+  --color-gray-text: #4f4f4f;
+  --color-gray-border: #828282;
+
+  --transiton-delay: 0.3s;
+  --transition-cubic: ease-in;
+
+  --border-black: 1px solid var(--color-black);
 }
 
 .container {
   padding: 0 15px;
   max-width: calc(1360px - 30px);
   margin: 0 auto;
-}
-
-
-@media screen and (max-width: 900px) {
-
 }

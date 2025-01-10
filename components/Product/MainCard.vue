@@ -4,6 +4,7 @@ export default {
   data() {
     return {
       data: mainCard,
+      color: "белый",
     };
   },
 };
@@ -25,7 +26,11 @@ export default {
       <div class="size">
         <p class="size__title">Размеры</p>
         <div class="size__list">
-          <div class="size" v-for="size in data.sizes">
+          <div
+            v-for="(size, index) in data.sizes"
+            :key="index"
+            :class="size.class"
+          >
             <div class="size__item">{{ size.title }}</div>
             <div class="size__count">{{ size.count ? size.count : "" }}</div>
           </div>
@@ -33,15 +38,27 @@ export default {
       </div>
 
       <div class="colors">
-        <p class="colors__title">Цвет: белый</p>
+        <p class="colors__title">Цвет: {{ color }}</p>
         <div class="colors__list">
-          <div class="color">
+          <div
+            @mouseover="color = 'белый'"
+            class="color"
+            :class="{ colorActive: color === 'белый' }"
+          >
             <div class="colors__item white"></div>
           </div>
-          <div class="color">
+          <div
+            @mouseover="color = 'чёрный'"
+            class="color"
+            :class="{ colorActive: color === 'чёрный' }"
+          >
             <div class="colors__item black"></div>
           </div>
-          <div class="color">
+          <div
+            @mouseover="color = 'бежевый'"
+            class="color"
+            :class="{ colorActive: color === 'бежевый' }"
+          >
             <div class="colors__item beige"></div>
           </div>
         </div>
@@ -84,10 +101,12 @@ export default {
 
 .product__title {
   margin-bottom: 11px;
+  color: var(--color-black);
 }
 
 .product__price {
   margin-bottom: 28px;
+  color: var(--color-black);
 }
 
 .product__title,
@@ -96,11 +115,17 @@ export default {
   line-height: 16px;
 }
 
+.noActive .size__item {
+  border: 1px solid var(--color-gray);
+  color: var(--color-gray);
+}
+
 .size__title {
   font-size: 10px;
   line-height: 14px;
   margin-top: 28px;
   margin-bottom: 8px;
+  color: var(--color-gray-text);
 }
 
 .size__list {
@@ -113,12 +138,15 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  color: var(--color-text);
   width: 65px;
   height: 31px;
   text-transform: uppercase;
   font-size: 10px;
   line-height: 14px;
-  border: 1px solid black;
+
+  border: 1px solid var(--color-text);
   cursor: pointer;
 }
 
@@ -127,23 +155,24 @@ export default {
   margin-top: 3px;
   font-size: 10px;
   line-height: 14px;
-  color: #828282;
+  color: var(--color-gray);
 }
 
 .color {
   border-bottom: 1px solid transparent;
   padding: 3px;
-  transition: border-color 0.2s ease-in-out;
+  transition: border-color var(--transition-delay) var(--transition-cubic);
+  /* transition: border-color 0.2s ease-in-out; */
+}
 
-  &:hover {
-    border-color: #828282;
-  }
+.colorActive {
+  border-color: var(--color-gray-text);
 }
 
 .colors__title {
   font-size: 10px;
   line-height: 14px;
-  color: #4f4f4f;
+  color: var(--color-gray-text);
   margin-bottom: 3px;
 }
 
@@ -156,20 +185,20 @@ export default {
 .colors__item {
   width: 28px;
   height: 27px;
-  border: 1px solid #bdbdbd;
+  border: 1px solid var(--color-gray);
   cursor: pointer;
 }
 
 .white {
-  background-color: #ffffff;
+  background-color: var(--color-white);
 }
 
 .black {
-  background-color: #000000;
+  background-color: var(--color-black);
 }
 
 .beige {
-  background-color: #f9f1dc;
+  background-color: var(--color-beige);
 }
 
 .buttons {
@@ -192,10 +221,6 @@ export default {
 @media screen and (max-width: 618px) {
   .product__galery {
     display: none;
-  }
-
-  .product__card {
-    background-color: green;
   }
 
   .product__description {

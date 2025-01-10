@@ -28,7 +28,7 @@ export default {
 .galery__title {
   text-transform: uppercase;
   font-size: 12px;
-  color: #333333;
+  color: var(--color-text);
   margin-bottom: 31px;
 }
 

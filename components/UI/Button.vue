@@ -27,14 +27,14 @@ export default {
   line-height: 15px;
   width: 257px;
   height: 14px;
-  color: white;
+  color: var(--color-white);
   text-transform: uppercase;
   text-align: center;
 }
 
 .btn__tocart {
   padding: 15px 25px;
-  background-color: #000000;
+  background-color: var(--color-black);
   border: 1px solid currentColor;
 }
 
@@ -42,19 +42,19 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #fff;
+  background-color: var(--color-white);
 
   width: 44px;
   height: 44px;
 
-  border: 1px solid black;
+  border: var(--border-black);
 }
 
 .btn__media {
   display: none;
   padding: 10px;
   border: none;
-  background-color: #ffffff;
+  background-color: var(--color-white);
   position: absolute;
   top: 13px;
   right: 0;

@@ -25,7 +25,7 @@ export default {
   transition: box-shadow 0.2s ease-in-out;
 
   &:hover {
-    box-shadow: 10px 10px 5px 0 #0000005a;
+    box-shadow: 10px 10px 5px 0 var(--color-gray-text);
   }
 }
 .card__body {
@@ -33,11 +33,19 @@ export default {
   line-height: 14px;
   padding-left: 15px;
   padding-bottom: 7px;
+  color: var(--color-text);
 }
 
 .card__title {
   margin-top: 15px;
   margin-bottom: 10px;
+  font-size: 10px;
+  line-height: 14px;
+}
+
+.card__price {
+  font-size: 10px;
+  line-height: 14px;
 }
 
 .card__img {

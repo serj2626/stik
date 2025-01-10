@@ -35,7 +35,7 @@ export default {
   text-transform: uppercase;
   font-size: 10px;
   line-height: 14px;
-  color: #333333;
+  color: var(--color-text);
 }
 
 .accordion__action {
