@@ -41,17 +41,9 @@ export default {
 .accordion__action {
   padding-right: 7px;
 }
-/*
+
 @media screen and (max-width: 500px) {
   .accordion__item {
-    background-color: greenyellow;
-    margin-inline: 16px;
-  }
-} */
-
-@media screen and (max-width: 380px) {
-  .accordion__item {
-    background-color: rgb(171, 177, 161);
     width: 100%;
     margin-inline: auto;
   }
