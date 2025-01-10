@@ -108,8 +108,9 @@ export default {
   margin-bottom: 28px;
   color: var(--color-black);
 }
-
-.product__title,
+.accordion {
+  width: 100%;
+}
 .product__price {
   font-size: 12px;
   line-height: 16px;
@@ -208,6 +209,10 @@ export default {
   margin-bottom: 40px;
 }
 
+/* .accordion {
+  width: 100%;
+} */
+
 @media screen and (max-width: 1000px) {
   .product {
     flex-wrap: wrap;
@@ -225,9 +230,8 @@ export default {
 
   .product__description {
     width: 100%;
-    padding-left: 20px;
+    margin-left: 16px;
     align-items: start;
-    margin-inline: 16px;
   }
 }
 

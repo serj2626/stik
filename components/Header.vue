@@ -18,7 +18,7 @@ export default {
 
     <nav class="header__menu">
       <ul class="menu">
-        <li class="menu__item" v-for="link in links">
+        <li class="menu__item" v-for="link in links" :class="link.class">
           <a class="menu__link" href="#">
             <img class="menu__img" :src="link.src" :alt="link.title" />
           </a>
@@ -70,8 +70,25 @@ export default {
 }
 
 @media screen and (max-width: 1000px) {
-  .header {
+  /* .header {
     justify-content: center;
+  } */
+}
+
+@media screen and (max-width: 500px) {
+  .noVisible {
+    display: none;
   }
+  .header__menu {
+    width: 100%;
+    position: relative;
+    justify-content: space-between;
+  }
+
+  .last{
+    position: absolute;
+    right: 0;
+  }
+
 }
 </style>
